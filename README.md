@@ -140,3 +140,7 @@ Leal Lua Luis Roberto
 	</p>
 
 </pre>
+
+# Programa que realiza operaciones aritméticas básicas.
+--- 
+
