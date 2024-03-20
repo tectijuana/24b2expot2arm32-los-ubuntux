@@ -73,73 +73,77 @@ Leal Lua Luis Roberto
 
 </pre>
 
-## Anatomia de un Programa en Assembly
+## Anatomia de un Programa en Assembly (Ensamblador)
 ### Secciones
 ---
-<pre>
 
-	<p align=left>
-	jejejej
+**1. Sección de Datos (.data)**
+  
+Esta sección contiene las definiciones de variables inicializadas con valores específicos. 
+Dentro de esta se definen las etiquetas (símbolos) que representan las direcciones de memoria de estas variables. 
 
+**2. Sección de Código (.text)**
+  
+Esta sección contiene las instrucciones ejecutables del programa. 
+Cada instrucción está precedida por una etiqueta opcional que puede ser utilizada para hacer referencia a esa ubicación de memoria.
 
-	</p>
-
-</pre>
+**3. Sección de Datos No Inicializados (.bss)**
+  
+Esta sección contiene las instrucciones ejecutables del programa. 
+Cada instrucción está precedida por una etiqueta opcional que puede ser utilizada para hacer referencia a esa ubicación de memoria.
 
 ### Etiquetas
 ---
-<pre>
 
-	<p align=left>
-
-
-	</p>
-
-</pre>
+Son identificadores simbólicos que representan direcciones de memoria específicas. Pueden ser utilizadas para hacer referencia a variables, subrutinas o ubicaciones de código.
 
 ### Instrucciones
 --- 
-<pre>
 
-	<p align=left>
-
-
-	</p>
-
-</pre>
+Son las operaciones básicas que realiza el procesador, como mover datos entre registros y memoria, realizar operaciones aritméticas y lógicas, y controlar el flujo del programa mediante saltos condicionales e incondicionales.
 
 ## Proceso de Compilación
 --- 
-<pre>
 
-	<p align=left>
+El proceso de compilación convierte el código fuente escrito en lenguaje ensamblador a código objeto (archivos .o). Este proceso se lleva a cabo mediante una herramienta llamada ensamblador (por ejemplo, as en sistemas Unix/Linux).
 
+Los pasos principales del proceso de compilación son:
 
-	</p>
+**1. Preprocesamiento** 
 
-</pre>
+En esta etapa, el preprocesador del ensamblador maneja las directivas del ensamblador, como la inclusión de archivos y la definición de macros.
+
+**2. Ensamblado**
+
+El ensamblador traduce las instrucciones en lenguaje ensamblador a código máquina, que es la representación binaria que entiende el procesador. Además, resuelve las referencias simbólicas (etiquetas) a direcciones de memoria dentro del mismo archivo fuente.
+
+**3. Generación de código objeto** 
+
+El resultado del ensamblado es un archivo objeto que contiene el código máquina generado, así como información adicional necesaria para el siguiente paso del proceso, que es el enlazado.
 
 ## Proceso de Compilación y Enlazado
 --- 
-<pre>
 
-	<p align=left>
+El proceso de compilación y enlazado convierte el código fuente en lenguaje ensamblador en un ejecutable que puede ser ejecutado por el sistema operativo. Este proceso consta de dos pasos principales:
+
+**1. Compilación**
+
+* El ensamblador (as) traduce el código fuente en ensamblador a código objeto (archivos .o).
+* Resuelve las referencias simbólicas (etiquetas) a direcciones de memoria dentro del mismo archivo fuente.
+* Genera un archivo objeto que contiene el código máquina y información adicional.
 
 
-	</p>
-
-</pre>
+**2. Enlazado**
+* El enlazador (ld) combina uno o más archivos objeto en un solo archivo ejecutable.
+* Resuelve las referencias externas a funciones y variables definidas en otros archivos objeto o bibliotecas.
+* Vincula las bibliotecas necesarias (por ejemplo, libc) con el ejecutable final.
+* Asigna ubicaciones de memoria para las diferentes secciones del programa (código, datos, etc.).
+* Genera el archivo ejecutable final que contiene todo el código y los datos necesarios.
 
 ## Creación de un Makelife simple
 --- 
-<pre>
-
-	<p align=left>
 
 
-	</p>
-
-</pre>
 
 # Programa que realiza operaciones aritméticas básicas.
 --- 
