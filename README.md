@@ -135,7 +135,7 @@ El proceso de compilación y enlazado convierte el código fuente en lenguaje en
 
 * El ensamblador (as) traduce el código fuente en ensamblador a código objeto (archivos .o).
 * Resuelve las referencias simbólicas (etiquetas) a direcciones de memoria dentro del mismo archivo fuente.
-* Genera un archivo objeto que contiene el código máquina y información adicional.
+* Genera un archivo objeto que contiene el código máquina e información adicional.
 
 
 **2. Enlazado**
@@ -147,7 +147,7 @@ El proceso de compilación y enlazado convierte el código fuente en lenguaje en
 
 ![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/efaaf861-9f26-4c75-a919-e518f34dbe06)
 
-## Creación de un Makelife simple
+## Creación de un Makefile simple
 --- 
 ![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/cac1a06f-2b39-479b-acd0-50a02b6280bd)
 
