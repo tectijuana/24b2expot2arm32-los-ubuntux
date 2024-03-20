@@ -76,6 +76,7 @@ Leal Lua Luis Roberto
 ## Anatomia de un Programa en Assembly (Ensamblador)
 ### Secciones
 ---
+![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/100de38c-3f6f-4556-b4e6-d649878afc36)
 
 **1. Sección de Datos (.data)**
   
@@ -96,6 +97,8 @@ Cada instrucción está precedida por una etiqueta opcional que puede ser utiliz
 ---
 
 Son identificadores simbólicos que representan direcciones de memoria específicas. Pueden ser utilizadas para hacer referencia a variables, subrutinas o ubicaciones de código.
+
+![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/63f2dbd5-08e4-46e1-a2bf-886319eee065)
 
 ### Instrucciones
 --- 
@@ -121,6 +124,8 @@ El ensamblador traduce las instrucciones en lenguaje ensamblador a código máqu
 
 El resultado del ensamblado es un archivo objeto que contiene el código máquina generado, así como información adicional necesaria para el siguiente paso del proceso, que es el enlazado.
 
+![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/8b771de7-e0de-4876-b761-a78ff7f5e9f7)
+
 ## Proceso de Compilación y Enlazado
 --- 
 
@@ -140,8 +145,48 @@ El proceso de compilación y enlazado convierte el código fuente en lenguaje en
 * Asigna ubicaciones de memoria para las diferentes secciones del programa (código, datos, etc.).
 * Genera el archivo ejecutable final que contiene todo el código y los datos necesarios.
 
+![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/efaaf861-9f26-4c75-a919-e518f34dbe06)
+
 ## Creación de un Makelife simple
 --- 
+![image](https://github.com/tectijuana/24b2expot2arm32-los-ubuntux/assets/105456306/cac1a06f-2b39-479b-acd0-50a02b6280bd)
+
+
+Un Makefile es un archivo que contiene instrucciones para automatizar el proceso de compilación y enlazado de un programa. Aquí hay un ejemplo de un Makefile simple para un programa en ensamblador:
+
+* makefile
+
+* Copy code
+---
+### Nombre del objetivo final
+
+* TARGET = programa
+---
+### Archivos fuente
+
+* SOURCES = main.s
+---
+### Reglas de compilación
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCES)
+
+    as -o $(TARGET).o $(SOURCES)
+    
+    ld -o $(TARGET) $(TARGET).o
+
+clean:
+    rm -f $(TARGET) $(TARGET).o
+En este Makefile:
+
+TARGET es el nombre del ejecutable final.
+SOURCES es una lista de archivos fuente en lenguaje ensamblador.
+La regla all define el objetivo principal, que en este caso es el ejecutable $(TARGET).
+La regla $(TARGET) compila el archivo fuente $(SOURCES) utilizando el ensamblador (as) y genera un archivo objeto $(TARGET).o.
+Luego, el archivo objeto se enlaza con el enlazador (ld) para generar el ejecutable $(TARGET).
+La regla clean elimina los archivos generados durante la compilación y el enlazado.
+Para compilar y enlazar el programa, simplemente ejecuta make en la línea de comandos. Para eliminar los archivos generados, ejecuta make clean.
 
 
 
