@@ -73,10 +73,68 @@ Leal Lua Luis Roberto
 
 </pre>
 
+## Anatomia de un Programa en Assembly
+### Secciones
+---
+<pre>
+
+	<p align=left>
+	jejejej
+
+
+	</p>
+
+</pre>
+
+### Etiquetas
+---
 <pre>
 
 	<p align=left>
 
+
+	</p>
+
+</pre>
+
+### Instrucciones
+--- 
+<pre>
+
+	<p align=left>
+
+
+	</p>
+
+</pre>
+
+## Proceso de Compilación
+--- 
+<pre>
+
+	<p align=left>
+
+
+	</p>
+
+</pre>
+
+## Proceso de Compilación y Enlazado
+--- 
+<pre>
+
+	<p align=left>
+
+
+	</p>
+
+</pre>
+
+## Creación de un Makelife simple
+--- 
+<pre>
+
+	<p align=left>
 
 
 	</p>
