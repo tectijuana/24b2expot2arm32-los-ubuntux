@@ -143,4 +143,48 @@ Leal Lua Luis Roberto
 
 # Programa que realiza operaciones aritméticas básicas.
 --- 
+ ```S
+section .data
+    ; Declaración de variables
+    num1    db  10      ; Primer número
+    num2    db  5       ; Segundo número
+    result  db  0       ; Variable para almacenar el resultado
+
+section .text
+    global _start
+
+_start:
+    ; Suma
+    mov al, [num1]     ; Mueve el primer número a AL
+    add al, [num2]     ; Suma el segundo número a AL
+    mov [result], al   ; Almacena el resultado en la variable 'result'
+
+    ; Resta
+    mov al, [num1]     ; Mueve el primer número a AL
+    sub al, [num2]     ; Resta el segundo número de AL
+    mov [result + 1], al ; Almacena el resultado en la siguiente posición de 'result'
+
+    ; Multiplicación
+    mov al, [num1]     ; Mueve el primer número a AL
+    imul byte [num2]  ; Multiplica AL por el segundo número
+    mov [result + 2], al ; Almacena el resultado en la siguiente posición de 'result'
+
+    ; División
+    mov al, [num1]     ; Mueve el primer número a AL
+    mov bl, [num2]     ; Mueve el segundo número a BL
+    xor ah, ah         ; Limpiar AH para dividir
+    div bl             ; Divide AL por BL
+    mov [result + 3], al ; Almacena el cociente en la siguiente posición de 'result'
+
+    ; Mostrar el resultado
+    mov edx, 3         ; Longitud del resultado (suma, resta, multiplicación)
+    mov ecx, result    ; Dirección del resultado
+    mov ebx, 1         ; Descriptor de archivo estándar (stdout)
+    mov eax, 4         ; Llamada al sistema para escribir
+    int 0x80           ; Interrupción del sistema
+
+    ; Salir del programa
+    mov eax, 1         ; Llamada al sistema para salir
+    xor ebx, ebx       ; Código de salida cero
+    int 0x80           ; Interrupción del sistema
 
