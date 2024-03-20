@@ -226,7 +226,7 @@ _start:
     mov [result + 3], al ; Almacena el cociente en la siguiente posición de 'result'
 
     ; Mostrar el resultado
-    mov edx, 3         ; Longitud del resultado (suma, resta, multiplicación)
+    mov edx, 4         ; Longitud del resultado (suma, resta, multiplicación, división)
     mov ecx, result    ; Dirección del resultado
     mov ebx, 1         ; Descriptor de archivo estándar (stdout)
     mov eax, 4         ; Llamada al sistema para escribir
